@@ -1,0 +1,10 @@
+- name: Checkout repository
+  uses: actions/checkout@v4
+  with:
+    fetch-depth: 0 # This is a required field for CodeGuru
+
+- name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::123456789100:role/my-github-actions-role
+        aws-region: us-east-2
