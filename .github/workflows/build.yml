@@ -4,13 +4,13 @@ on:
   push:
     branches: [main]
   pull_request:
-    branhces: [main]
+    branches: [main]
 
 jobs:
   builds:
     runs-on: ubuntu-latest
+    
 steps:
-
 # Step 1: Checkout the repository and provide your AWS credentials
 - name: Checkout repository
   uses: actions/checkout@v4
