@@ -1,4 +1,4 @@
-name: CodeGuru Reviewer
+name: CodeGuru Reviewers
 
 on:
   push:
