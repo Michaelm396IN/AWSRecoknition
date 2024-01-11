@@ -36,8 +36,3 @@ jobs:
       uses: github/codeql-action/upload-sarif@v1
       with:
         sarif_file: codeguru-results.sarif.json
-
-
-      
-      with:
-      sarif_file: codeguru-results.sarif.json
