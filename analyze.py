@@ -64,9 +64,9 @@ def show_custom_labels(model,bucket,photo, min_confidence):
 
 def main():
 
-    bucket='custom-labels-console-us-east-2-d6149c3fb8'
-    photo='assets/Electronic/Apple/1.jpg'
-    model='arn:aws:rekognition:us-east-2:935611332219:project/tech_logo/version/tech_logo.2023-11-06T04.30.20/1699273821075'
+    bucket='custom-labels-console-us-east-1-c87f82e040'
+    photo='assets/Electronic/Intel/1.jpg'
+    model='arn:aws:rekognition:us-east-1:471112774796:project/recoknition_ex/version/recoknition_ex.2024-03-08T01.04.15/1709888655581'
     min_confidence=95
 
     label_count=show_custom_labels(model,bucket,photo, min_confidence)
