@@ -7,7 +7,7 @@ import time
 
 def stop_model(model_arn):
 
-    client=boto3.client('rekognition',region_name="us-east-2")
+    client=boto3.client('rekognition',region_name="us-east-1")
 
     print('Stopping model:' + model_arn)
 
@@ -23,7 +23,7 @@ def stop_model(model_arn):
     
 def main():
     
-    model_arn='arn:aws:rekognition:us-east-2:935611332219:project/tech_logo/version/tech_logo.2023-11-06T04.30.20/1699273821075'
+    model_arn='arn:aws:rekognition:us-east-1:471112774796:project/recoknition_ex/version/recoknition_ex.2024-03-08T01.04.15/1709888655581'
     stop_model(model_arn)
 
 if __name__ == "__main__":
