@@ -2,10 +2,11 @@
 #PDX-License-Identifier: MIT-0 (For details, see https://github.com/awsdocs/amazon-rekognition-custom-labels-developer-guide/blob/master/LICENSE-SAMPLECODE.)
 
 import boto3
+#from codeguru_profiler_agent import Profiler
 
 def start_model(project_arn, model_arn, version_name, min_inference_units):
 
-    client=boto3.client('rekognition',region_name="us-east-2")
+    client=boto3.client('rekognition',region_name="us-east-1")
 
     try:
         # Start the model
@@ -27,11 +28,15 @@ def start_model(project_arn, model_arn, version_name, min_inference_units):
     print('Done...')
     
 def main():
-    project_arn='arn:aws:rekognition:us-east-2:935611332219:project/tech_logo/1699273709204'
-    model_arn='arn:aws:rekognition:us-east-2:935611332219:project/tech_logo/version/tech_logo.2023-11-06T04.30.20/1699273821075'
+    project_arn='arn:aws:rekognition:us-east-1:471112774796:project/recoknition_ex/1709885642762'
+    model_arn='arn:aws:rekognition:us-east-1:471112774796:project/recoknition_ex/version/recoknition_ex.2024-03-08T01.04.15/1709888655581'
     min_inference_units=1 
-    version_name='tech_logo.2023-11-06T04.30.20'
+    version_name='recoknition_ex.2024-03-08T01.04.15'
+    #custom_session = boto3.session.Session(profile_name='moorer_role', region_name='us-east-2')
+    #Profiler(profiling_group_name="SampleProfilingGroup").start()
     start_model(project_arn, model_arn, version_name, min_inference_units)
+    
 
 if __name__ == "__main__":
     main()
+   
